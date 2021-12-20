@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta content="Treal- Admin Responsive Bootstrap HTML Dashboard Template" name="description">
+    <meta content="Spruko Technologies Private Limited" name="author">
+    <meta name="keywords" content="admin site template, html admin template,responsive admin template, admin panel template, bootstrap admin panel template, admin template, admin panel template, bootstrap simple admin template premium, simple bootstrap admin template, best bootstrap admin template, simple bootstrap admin template, admin panel template,responsive admin template, bootstrap simple admin template premium" />
+
+    <!-- Title -->
+    <title>IPhone</title>
+
+    <!--Bootstrap.min css-->
+    <link rel="stylesheet" href="~/admin_assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!--Style css-->
+    <link href="~/admin_assets/css/style.css" rel="stylesheet" />
+
+    <link href="~/admin_assets/css/skin-mode.css" rel="stylesheet" />
+
+    <!--Icons css-->
+    <link rel="stylesheet" href="~/admin_assets/css/icons.css">
+
+    <!-- P-Scrollbar css-->
+    <link rel="stylesheet" href="~/admin_assets/plugins/p-scroll/p-scroll.css">
+
+    <!--Sidemenu css-->
+    <link rel="stylesheet" href="~/admin_assets/plugins/sidemenu/sidemenu-1/closed-sidemenu.css">
+
+    <!-- Siderbar css-->
+    <link href="~/admin_assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="~/admin_assets/css/color-skins/color.css" />
+
+
+
+
+    <script src="~/App/angular.js"></script>
+    <script src="~/App/GlobalSettings.js"></script>
+    <script src="~/App/Appmodule.js"></script>
+    <script src="~/App/globalService.js"></script>
+    @*<script src="~/App/directives.js"></script>*@
+    @*<script src="~/App/angular-datatables.min.js"></script>*@
+
+
+</head>
+<body class="app sidebar-mini" ng-app="MyApp" ng-controller="MyCntrl">
+    <!--loader -->
+    <div id="spinner">
+        <img src="www.IponeRepair.com/demo/treal/html/assets/img/svgs/loader.svg" alt="loader">
+    </div>
+
+    <!--app open-->
+    <div id="app" class="page">
+        <div class="main-wrapper">
+
+            <!--nav open-->
+            <nav class="navbar navbar-expand-lg main-navbar left-header">
+                <a class="header-brand" href="index.html">
+                    <img src="~/admin_assets/img/brand/logo-white.png" class="header-brand-img main-logo" alt="Treal-Admin  logo">
+                    <img src="~/admin_assets/img/brand/icon.png" class="header-brand-img mobile-logo" alt="Treal-Admin  logo">
+                </a>
+                <form class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-2">
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link toggle"><i class="fe fe-align-justify"></i></a></li>
+                        <li><a href="#" data-toggle="search" class="nav-link nav-link d-md-none navsearch"><i class="fe fe-search"></i></a></li>
+                    </ul>
+                    <div class="search-element mr-3">
+                        <input class="form-control" placeholder="Search" aria-label="Search">
+                        <span class="Search-icon"><i class="fa fa-search"></i></span>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle header-fullscreen">
+                        <a href="#" class="nav-link nav-link-lg full-screen-link" id="fullscreen-button">
+                            <i class="fe fe-maximize"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle header-flags">
+                        <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg ">
+                            <span><img src="~/admin_assets/img/flags/french_flag.jpg" alt="flag-img"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg  dropdown-menu-right">
+                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                <img src="~/admin_assets/img/flags/us_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                <div>
+                                    <b>USA</b>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                <img src="~/admin_assets/img/flags/germany_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                <div>
+                                    <b>Germany</b>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                <img src="~/admin_assets/img/flags/italy_flag.jpg" alt="flag-img" class=" flag-sm  mr-3 align-self-center">
+                                <div>
+                                    <b>Italy</b>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                <img src="~/admin_assets/img/flags/russia_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                <div>
+                                    <b>Russia</b>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                <img src="~/admin_assets/img/flags/spain_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                <div>
+                                    <b>Spain</b>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle header-msg">
+                        <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg ">
+                            <span class="badge badge-danger nav-link-badge">3</span><i class="fe fe-mail"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                            <div class="dropdown-list-content">
+                                <a href="#" class="dropdown-item ">
+                                    <img alt="image" src="~/admin_assets/img/avatar/6.jpg" class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <div class="dropdownmsg d-flex">
+                                            <div class="">
+                                                <b>Alan	Abraham</b>
+                                                <p>Your template awesome</p>
+                                            </div>
+                                            <div class="time">6 hours ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item dropdown-item-unread">
+                                    <img alt="image" src="~/admin_assets/img/avatar/4.jpg" class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <div class="dropdownmsg d-flex">
+                                            <div class="">
+                                                <b>Peter Clarkson</b>
+                                                <p>Your Order Shipped.....</p>
+                                            </div>
+                                            <div class="time">45 mins ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <img alt="image" src="~/admin_assets/img/avatar/3.jpg" class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <div class="dropdownmsg d-flex">
+                                            <div class="">
+                                                <b>Lily	Avery</b>
+                                                <p>Hi!, I' am web developer</p>
+                                            </div>
+                                            <div class="time"> 8 hours ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item dropdown-item-unread">
+                                    <img alt="image" src="~/admin_assets/img/avatar/8.jpg" class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <div class="dropdownmsg d-flex">
+                                            <div class="">
+                                                <b>John	Bower</b>
+                                                <p>Hi!, I' am web designer</p>
+                                            </div>
+                                            <div class="time"> 3 hours ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <img alt="image" src="~/admin_assets/img/avatar/5.jpg" class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <div class="dropdownmsg d-flex">
+                                            <div class="">
+                                                <b>Lily	Kerr</b>
+                                                <p>Hi!, I' am java developer</p>
+                                            </div>
+                                            <div class="time"> 15 mintues ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" text-center p-2">
+                                <a href="#" class="text-dark">View All Messages</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle header-notify">
+                        <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg ">
+                            <i class="fe fe-bell"></i><span class="pulse bg-warning"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                            <div class="dropdown-list-content">
+                                <a href="#" class="dropdown-item">
+                                    <i class="fe fe-users text-primary"></i>
+                                    <div class="dropdown-item-desc">
+                                        <b>New Users Registered..</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fe fe-alert-circle text-danger"></i>
+                                    <div class="dropdown-item-desc">
+                                        <b>Error message occurred....</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fe fe-rotate-cw text-warning"></i>
+                                    <div class="dropdown-item-desc">
+                                        <b> Application Upadated</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fe fe-shopping-cart text-success"></i>
+                                    <div class="dropdown-item-desc">
+                                        <b>Your items Arrived</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fe fe-message-square text-orange"></i>
+                                    <div class="dropdown-item-desc">
+                                        <b>New Message received</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" text-center p-2">
+                                <a href="#" class="text-dark">View All Notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- navbar mobile-->
+                    <li>
+                        <a href="#" class="navresponsive-toggler d-sm-none nav-link  nav-link-lg d-flex" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                           aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="navbar-toggler-icon fe fe-more-vertical text-white"></i>
+                        </a>
+                    </li><!-- navbar mobile-->
+                    <li class="dropdown header-user">
+                        <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg d-flex">
+                            <span><img src="~/admin_assets/img/avatar/2.jpg" alt="profile-user" class="rounded-circle w-32 mr-2"></span>
+                            <span class=" mt-2 d-none d-lg-block ">
+                                <span class="text-white"><span class="ml-1"> Alica Nestle</span></span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class=" dropdown-header noti-title text-center border-bottom pb-3">
+                                <h5 class="text-capitalize text-dark mb-1">Welcome</h5>
+                            </div>
+                            <a class="dropdown-item" href="profile.html"><i class="mdi mdi-account-outline mr-2"></i> <span>My profile</span></a>
+                            <a class="dropdown-item" href="#"><i class="mdi mdi-settings mr-2"></i> <span>Settings</span></a>
+                            <a class="dropdown-item" href="#"><i class="fe fe-calendar mr-2"></i> <span>Activity</span></a>
+                            <a class="dropdown-item" href="#"><i class="mdi mdi-compass-outline mr-2"></i> <span>Support</span></a>
+                            <a class="dropdown-item" href="login.html"><i class="mdi  mdi-logout-variant mr-2"></i> <span>Logout</span></a>
+                        </div>
+                    </li>
+                    <li class="dropdown header-sidebar">
+                        <a href="#" class="nav-link nav-link-lg " data-toggle="sidebar-right" data-target=".sidebar-right">
+                            <i class="fe fe-align-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!--nav closed-->
+            <!-- navbar mobile -->
+            <div class="mb-1 responsive-navbar navbar-dark d-sm-none bg-white">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav navbar-right">
+                        <li class="dropdown header-fullscreen">
+                            <a href="#" class="nav-link nav-link-lg full-screen-link" id="fullscreen-button">
+                                <i class="fe fe-maximize"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown  header-flags1">
+                            <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg ">
+                                <span><img src="~/admin_assets/img/flags/french_flag.jpg" alt="flag-img"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg  dropdown-menu-right">
+                                <a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="~/admin_assets/img/flags/us_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                    <div>
+                                        <b>USA</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="~/admin_assets/img/flags/germany_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                    <div>
+                                        <b>Germany</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="~/admin_assets/img/flags/italy_flag.jpg" alt="flag-img" class=" flag-sm  mr-3 align-self-center">
+                                    <div>
+                                        <b>Italy</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="~/admin_assets/img/flags/russia_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                    <div>
+                                        <b>Russia</b>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="~/admin_assets/img/flags/spain_flag.jpg" alt="flag-img" class=" flag-sm mr-3 align-self-center">
+                                    <div>
+                                        <b>Spain</b>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropdown  header-msg1">
+                            <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg ">
+                                <span class="badge badge-danger nav-link-badge">3</span><i class="fe fe-mail"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                                <div class="dropdown-list-content">
+                                    <a href="#" class="dropdown-item ">
+                                        <img alt="image" src="~/admin_assets/img/avatar/6.jpg" class="rounded-circle dropdown-item-img">
+                                        <div class="dropdown-item-desc">
+                                            <div class="dropdownmsg d-flex">
+                                                <div class="">
+                                                    <b>Alan	Abraham</b>
+                                                    <p>Your template awesome</p>
+                                                </div>
+                                                <div class="time">6 hours ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item dropdown-item-unread">
+                                        <img alt="image" src="~/admin_assets/img/avatar/4.jpg" class="rounded-circle dropdown-item-img">
+                                        <div class="dropdown-item-desc">
+                                            <div class="dropdownmsg d-flex">
+                                                <div class="">
+                                                    <b>Peter Clarkson</b>
+                                                    <p>Your Order Shipped.....</p>
+                                                </div>
+                                                <div class="time">45 mins ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <img alt="image" src="~/admin_assets/img/avatar/3.jpg" class="rounded-circle dropdown-item-img">
+                                        <div class="dropdown-item-desc">
+                                            <div class="dropdownmsg d-flex">
+                                                <div class="">
+                                                    <b>Lily	Avery</b>
+                                                    <p>Hi!, I' am web developer</p>
+                                                </div>
+                                                <div class="time"> 8 hours ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item dropdown-item-unread">
+                                        <img alt="image" src="~/admin_assets/img/avatar/8.jpg" class="rounded-circle dropdown-item-img">
+                                        <div class="dropdown-item-desc">
+                                            <div class="dropdownmsg d-flex">
+                                                <div class="">
+                                                    <b>John	Bower</b>
+                                                    <p>Hi!, I' am web designer</p>
+                                                </div>
+                                                <div class="time"> 3 hours ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <img alt="image" src="~/admin_assets/img/avatar/5.jpg" class="rounded-circle dropdown-item-img">
+                                        <div class="dropdown-item-desc">
+                                            <div class="dropdownmsg d-flex">
+                                                <div class="">
+                                                    <b>Lily	Kerr</b>
+                                                    <p>Hi!, I' am java developer</p>
+                                                </div>
+                                                <div class="time"> 15 mintues ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" text-center p-2">
+                                    <a href="#" class="text-dark">View All Messages</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown  header-notify1">
+                            <a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg ">
+                                <i class="fe fe-bell"></i><span class="pulse bg-warning"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                                <div class="dropdown-list-content">
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fe fe-users text-primary"></i>
+                                        <div class="dropdown-item-desc">
+                                            <b>New Users Registered..</b>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fe fe-alert-circle text-danger"></i>
+                                        <div class="dropdown-item-desc">
+                                            <b>Error message occurred....</b>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fe fe-rotate-cw text-warning"></i>
+                                        <div class="dropdown-item-desc">
+                                            <b> Application Upadated</b>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fe fe-shopping-cart text-success"></i>
+                                        <div class="dropdown-item-desc">
+                                            <b>Your items Arrived</b>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fe fe-message-square text-orange"></i>
+                                        <div class="dropdown-item-desc">
+                                            <b>New Message received</b>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" text-center p-2">
+                                    <a href="#" class="text-dark">View All Notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--End navbar mobile- -->
+            <!-- Sidebar menu-->
+            @await Html.PartialAsync("~/Views/PartialViews/_PartialAdminMenu.cshtml")            <!--sidemenu end-->
+            <!--app-content open-->
+            <div class="app-content">
+                <section class="section">
+
+                    <!--page-header open-->
+                    @await Html.PartialAsync("~/Views/PartialViews/_PartialAdminHeader.cshtml")
+                    @RenderBody()
+
+
+                </section>
+            </div>
+            <!--app-content closed-->
+            <!-- Side-bar -->
+            <div class="sidebar sidebar-right sidebar-animate">
+                <div class="m-3">
+                    <a href="#" class="text-right float-right" data-toggle="sidebar-right" data-target=".sidebar-right"><i class="fe fe-x"></i></a>
+                </div>
+                <div class="rightmenu ">
+                    <h5>Latest News</h5>
+                    <div class="p-2">
+                        <div class="latest-timeline">
+                            <ul class="timeline mb-0">
+                                <li class="mt-0">
+                                    <a target="_blank" href="#">Sed ut perspiciatis </a>
+                                    <a href="#" class="float-right text-dark">23 Apr, 2019</a>
+                                    <p class="text-muted">sed do eiusmod tempor incididunt ut labore et dolore. </p>
+                                </li>
+                                <li>
+                                    <a href="#">Nam libero tempore</a>
+                                    <a href="#" class="float-right text-dark">21 Apr, 2019</a>
+                                    <p class="text-muted">sed do eiusmod tempor  magna aliqua nisi ut aliquip. </p>
+                                </li>
+                                <li>
+                                    <a href="#">Excepteur  cupidatat</a>
+                                    <a href="#" class="float-right text-dark">18 Apr, 2019</a>
+                                    <p class="text-muted">sed do eiusmod tempor incididunt ut labore  ut aliquip.</p>
+                                </li>
+                                <li class="mb-0">
+                                    <a href="#">Neque porro est</a>
+                                    <a href="#" class="float-right text-dark">17 Apr, 2019</a>
+                                    <p class="text-muted">sed do eiusmod tempor  aliqua nisi ut aliquip . </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary btn-block mb-4">Adding</a>
+                        </div>
+                    </div>
+                    <h5>Visitors</h5>
+                    <div class="card-body p-0">
+                        <ul class="visitor list-unstyled list-unstyled-border">
+                            <li class="media p-2 mb-0">
+                                <img class="mr-3 rounded-circle" width="50" src="~/admin_assets/img/avatar/6.jpg" alt="avatar">
+                                <div class="media-body">
+                                    <div class="float-right"><small>10-4-2018</small></div>
+                                    <div class="media-title">Blake Vanessa</div>
+                                    <small>sed do eiusmod tempor incididunt ut labore</small>
+                                </div>
+                            </li>
+                            <li class="media p-2 mb-0">
+                                <img class="mr-3 rounded-circle" width="50" src="~/admin_assets/img/avatar/2.jpg" alt="avatar">
+                                <div class="media-body">
+                                    <div class="float-right"><small>15-4-2018</small></div>
+                                    <div class="media-title">Keith Rutherford</div>
+                                    <small>sed do eiusmod tempor incididunt ut labore</small>
+                                </div>
+                            </li>
+                            <li class="media p-2 mb-0">
+                                <img class="mr-3 rounded-circle" width="50" src="~/admin_assets/img/avatar/3.jpg" alt="avatar">
+                                <div class="media-body">
+                                    <div class="float-right"><small>17-4-2018</small></div>
+                                    <div class="media-title">Elizabeth Parsons</div>
+                                    <small>sed do eiusmod tempor incididunt ut labore</small>
+                                </div>
+                            </li>
+                            <li class="media border-b0 p-2 mb-0">
+                                <img class="mr-3 rounded-circle" width="50" src="~/admin_assets/img/avatar/4.jpg" alt="avatar">
+                                <div class="media-body">
+                                    <div class="float-right"><small>22-3-2018</small></div>
+                                    <div class="media-title">Nicola Lambert</div>
+                                    <small>sed do eiusmod tempor incididunt ut labore</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--side-bar Closed -->
+            <!--Footer-->
+            @await Html.PartialAsync("~/Views/PartialViews/_PartialAdminFooter.cshtml")
+            <!--/Footer-->
+
+        </div>
+    </div>
+    <!--app closed-->
+    <!-- Back to top -->
+    <a href="#top" id="back-to-top"><i class="fa fa-long-arrow-up"></i></a>
+
+    <!--Jquery.min js-->
+    <script src="~/admin_assets/js/jquery.min.js"></script>
+
+    <!--popper js-->
+    <script src="~/admin_assets/js/popper.js"></script>
+
+    <!--Bootstrap.min js-->
+    <script src="~/admin_assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Tooltip js-->
+    <script src="~/admin_assets/js/tooltip.js"></script>
+
+    <!-- Jquery star rating-->
+    <script src="~/admin_assets/plugins/rating/jquery.rating-stars.js"></script>
+
+    <!--Sidemenu js-->
+    <script src="~/admin_assets/plugins/sidemenu/sidemenu-1/sidemenu-1.js"></script>
+
+    <!-- Sidebar js-->
+    <script src="~/admin_assets/plugins/sidebar/sidebar.js"></script>
+
+    <!--P-Scrollbar js-->
+    <script src="~/admin_assets/plugins/p-scroll/p-scroll.js"></script>
+    <script src="~/admin_assets/js/p-scroll.js"></script>
+
+    <!--Dashboard js-->
+    <script src="~/admin_assets/js/index1.js"></script>
+    <!--Showmore js-->
+    <script src="~/admin_assets/js/jquery.showmore.js"></script>
+    <!--Scripts js-->
+    <script src="~/admin_assets/js/scripts1.js"></script>
+
+</body>
+</html>

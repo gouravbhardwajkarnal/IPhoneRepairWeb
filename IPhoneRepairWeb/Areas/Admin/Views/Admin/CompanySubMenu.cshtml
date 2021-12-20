@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<script src="~/App/Admin/CompanySubMenu.js"></script>
+<!--page-header open-->
+<div class="page-header">
+    <ol class="breadcrumb">
+        <!-- breadcrumb -->
+        <li class="breadcrumb-item"><a href="#"><i class="fe fe-home mr-2"></i>Mobile Sub Menu</a></li>
+
+    </ol><!-- End breadcrumb -->
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Add Sub Menu</h4>
+            </div>
+            <div class="card-body">
+                <form id="form-validation" novalidate>
+
+                    <div class="form-group">
+                        <label>Menu Name</label>
+                        <select class="form-control" ng-disabled="CustAccessD" ng-model="MenuName" ng-options="item.menuName as item.menuName for item in MenuList">
+                            <option value="">--Select--</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please Enter Menu Name
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>SubMenu Name</label>
+                        <input type="text" class="form-control" placeholder="Sub Menu Name" required ng-model="SubMenu">
+                        <div class="invalid-feedback">
+                            Please Enter SubMenu Name
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Url</label>
+                        <input type="text" class="form-control" placeholder="Url" required ng-model="Url">
+                        <div class="invalid-feedback">
+                            Please Enter Url
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-primary" type="submit" ng-click="SaveClick()" ng-hide="BtnSave">Submit</button>
+                    <button class="btn btn-primary" type="submit" ng-click="UpdateClick()" ng-show="BtnUpdate">Update</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card export-database">
+            <div class="card-header">
+                <h4>Details</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="example" class="table table-bordered border-t0 key-buttons text-nowrap w-100" datatable="ng">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Sno</th>
+                                <th>Menu</th>
+                                <th>SubMenu</th>
+                                <th>Url</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ML in SubMenuList">
+                                <td>
+                                    <a href="#" class="btn btn-action btn-primary" ng-click="EditMenu($index,ML.autoId)">Edit</a>
+                                    <a href="#" class="btn btn-action btn-danger" ng-click="DeleteMenu($index,ML.autoId)">Delete</a>
+                                </td>
+                                <td>{{$index+1}}</td>
+                                <td>{{ML.menuName}}</td>
+                                <td>{{ML.subMenu}}</td>
+                                <td>{{ML.menuUrl}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--row closed-->
