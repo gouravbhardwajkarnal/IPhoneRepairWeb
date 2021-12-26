@@ -1,5 +1,4 @@
-﻿angular.module("myApp")
-    .directive('numericonly', function () {
+﻿mod.directive('numericonly', function () {
         return {
             require: 'ngModel',
             link: function (scope, element, attr, ngModelCtrl) {
