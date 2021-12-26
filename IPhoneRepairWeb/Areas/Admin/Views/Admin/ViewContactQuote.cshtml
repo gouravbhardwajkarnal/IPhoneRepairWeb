@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<script src="~/App/Admin/ViewContactQuote.js"></script>
+<div class="page-header">
+    <ol class="breadcrumb">
+        <!-- breadcrumb -->
+        <li class="breadcrumb-item"><a href="#"><i class="fe fe-home mr-2"></i>View Contacts/Quotes Request</a></li>
+
+    </ol><!-- End breadcrumb -->
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card export-database">
+            <div class="card-header">
+                <h4>Details</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="example" class="table table-bordered border-t0 key-buttons text-nowrap w-100" datatable="ng">
+                        <thead>
+                            <tr>
+                                <th>Sno</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Query</th>
+                                <th>Location</th>
+                                <th>Date and Time</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ML in QueryList">
+                                <td>{{$index+1}}</td>
+                                <td>{{ML.name}}</td>
+                                <td>{{ML.phone}}</td>
+                                <td>{{ML.email}}</td>
+                                <td>{{ML.query}}</td>
+                                <td>{{ML.location}}</td>
+                                <td>{{ML.idate | date}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/App/User/AddContact.js"></script>
+<section class="with-bg solid-section">
+    <div class="fix-image-wrap" data-image-src="~/user_assets/images/service/contact-us.jpg" data-parallax="scroll"></div>
+    <div class="theme-back"></div>
+    <div class="container page-info">
+        <div class="section-alt-head container-md">
+            <h1 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Contact Us</h1>
+            <p data-inview-showup="showup-translate-left">A little something about our company</p>
+        </div>
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li><a href="index-2.html">Home</a></li>
+                <li class="path-separator"><i class="fas fa-chevron-right" aria-hidden="true"></i></li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="map-section" data-inview-showup="showup-translate-up">
+    <div class="gmap" data-lat="-33.878897" data-lng="151.103737"></div>
+    <div class="info-wrap">
+        <div class="info-container">
+            <div class="our-info main-bg">
+                <div class="info-block">
+                    <div class="info-title text-upper">Contact Us</div>
+                    <div class="info-line">
+                        <span class="info-icon"><i class="fas fa-map-marker-alt fa-fw" aria-hidden="true"></i></span>Sidestate NSW 4132, Australia
+                    </div>
+                    <div class="info-line">
+                        <span class="info-icon"><i class="fas fa-phone fa-fw" aria-hidden="true"></i></span>(555) 555-0312
+                    </div>
+                    <div class="info-line">
+                        <span class="info-icon"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></span>info@profix.com
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-title text-upper">Opening Hours</div>
+                    <div class="info-line">Monday-Friday<span class="pull-right">10:00 - 18:00</span></div>
+                    <div class="info-line">Saturday, Sunday<span class="pull-right">Closed</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="content-section container">
+    <div class="row cols-lg rows-lg">
+        <div class="sm-col-6">
+            <section data-inview-showup="showup-translate-right">
+                <h2 class="text-upper">How to find us</h2>
+                <p class="offs-lg">Our goal is to provide the best customer service and to answer all of your questions in a timely manner.</p>
+                <div class="rows-md">
+                    <div class="row cols-md rows-md">
+                        <div class="md-col-6">
+                            <div class="info-item">
+                                <div class="icon"><img src="~/user_assets/images/icons/side/phone.png" alt="" /></div>
+                                <div class="text">(555) 555-0312</div>
+                            </div>
+                        </div>
+                        <div class="md-col-6">
+                            <div class="info-item">
+                                <div class="icon"><img src="~/user_assets/images/icons/side/phone1.png" alt="" /></div>
+                                <div class="text">(555) 555-0312</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cols-md rows-md">
+                        <div class="md-col-6">
+                            <div class="info-item">
+                                <div class="icon"><img src="~/user_assets/images/icons/side/skype.png" alt="" /></div>
+                                <div class="text">(555) 555-0312</div>
+                            </div>
+                        </div>
+                        <div class="md-col-6">
+                            <div class="info-item">
+                                <div class="icon"><img src="~/user_assets/images/icons/side/instagram.png" alt="" /></div>
+                                <div class="text">#profix_service</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cols-md rows-md">
+                        <div class="md-col-6">
+                            <div class="info-item">
+                                <div class="icon"><img src="~/user_assets/images/icons/side/email.png" alt="" /></div>
+                                <div class="text">info@profix.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="sm-col-6">
+            <section class="block-md sm-fix-container muted-bg" data-inview-showup="showup-translate-left">
+                <h5 class="offs-md">Send Us a Message</h5>
+                <form>
+                    <div class="field-group">
+                        <div class="field-wrap"><input class="field-control" name="name" placeholder="Name" required="required" ng-model="ContactModel.Name" /> <span class="field-back"></span></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field-wrap"><input class="field-control" name="phone" placeholder="Phone" required="required" ng-model="ContactModel.Phone" /> <span class="field-back"></span></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field-wrap"><input class="field-control" name="email" type="email" placeholder="Email" required="required" ng-model="ContactModel.Email" /> <span class="field-back"></span></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field-wrap"><input class="field-control" name="location" placeholder="Location" required="required" ng-model="ContactModel.Location" /> <span class="field-back"></span></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field-wrap"><textarea class="field-control" name="message" placeholder="Query" required="required" ng-model="ContactModel.Query"></textarea> <span class="field-back"></span></div>
+                    </div>
+                    <div class="btn-block"><button class="btn text-upper ajax-disabled" ng-click="InsertContactDetails()" type="submit">send message</button></div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,6 @@
         var dataobject = {
             MenuName: $scope.MenuName,
             MenuUrl: $scope.Url,
-
         }
         Data = JSON.stringify(dataobject);
         commonService.post(ApiDomain + "/api/Admin/Create", Data).then(function (response) {
@@ -39,15 +38,11 @@
         $scope.BtnUpdate = true;
         $scope.BtnSave = true;
     }
-
-
     $scope.UpdateClick = function () {
-
         var dataobject = {
             AutoId: $scope.Autoid,
             MenuName: $scope.MenuName,
             MenuUrl: $scope.Url,
-
         }
         Data = JSON.stringify(dataobject);
         commonService.post(ApiDomain + "/api/Admin/Update", Data).then(function (response) {

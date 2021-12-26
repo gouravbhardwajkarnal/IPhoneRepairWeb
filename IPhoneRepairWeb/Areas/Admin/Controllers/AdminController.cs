@@ -21,5 +21,9 @@ namespace IPhoneRepairWeb.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult ViewContactQuote()
+        {
+            return View();
+        }
     }
 }

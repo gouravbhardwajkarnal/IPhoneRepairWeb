@@ -12,5 +12,9 @@ namespace IPhoneRepairWeb.Controllers
         {
             return View();
         }
+        public IActionResult ContactQuote()
+        {
+            return View();
+        }
     }
 }
